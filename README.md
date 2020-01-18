@@ -17,10 +17,9 @@ import json
 import amazon.ion.simpleion as ion
 from pyion2json import ion_to_json
 
-json_doc = ion_to_json(
-    ion.loads('{ first: "Tom" , last: "Riddle" }')
-)
-json.dumps(json_doc, indent=' ')
+ion_doc = '{ first: "Tom" , last: "Riddle" }'
+json_doc = ion_to_json(ion_doc)
+print(json.dumps(json_doc, indent=' '))
 
 ```
 
@@ -41,7 +40,7 @@ from pyion2json import ion_cursor_to_json
 with create_qldb_session() as qldb_session:
     qldb_cursor = qldb_session.execute_statement('SELECT first,last FROM Users')
     json_rows = ion_cursor_to_json(qldb_cursor)
-    json.dumps(json_rows, indent=' ')
+    print(json.dumps(json_rows, indent=' '))
 
 ```
 
