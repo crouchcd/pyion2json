@@ -8,7 +8,7 @@ with open('README.md', 'r') as fh:
 setup(
     name='pyion2json',
     packages=['pyion2json'],
-    description='Convert an Amazon Ion Document(s) to JSON',
+    description='Convert an Amazon Ion document(s) to JSON',
     long_description=long_description,
     long_description_content_type='text/markdown',
     version='0.0.1',
