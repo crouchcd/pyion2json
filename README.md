@@ -17,7 +17,7 @@ import json
 import amazon.ion.simpleion as ion
 from pyion2json import ion_to_json
 
-ion_doc = '{ first: "Tom" , last: "Riddle" }'
+ion_doc = ion.loads('{ first: "Tom" , last: "Riddle" }')
 json_doc = ion_to_json(ion_doc)
 print(json.dumps(json_doc, indent=' '))
 
